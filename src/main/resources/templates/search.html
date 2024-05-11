@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부산 추천 여행지</title>
+</head>
+<body>
+<h1>부산 추천 여행지</h1>
+<ul>
+  <li th:each="result : ${results}">
+    <p th:text="${result.PLACE_NM}"></p>
+    <p th:text="${result.SEASONNM}"></p>
+    <p th:text="${result.IEMNM}"></p>
+    <p th:text="${result.ETC_CN}"></p>
+  </li>
+</ul>
+</body>
+</html>

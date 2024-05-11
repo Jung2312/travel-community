@@ -1,0 +1,22 @@
+<!-- write-post.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Post</title>
+</head>
+<body>
+<!-- 게시글 작성 폼 -->
+<form th:action="@{/save-post}" method="post">
+    <!-- 게시글 작성 폼 내용 -->
+    <label for="title">제목</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="content">내용</label>
+    <textarea id="content" name="content" required></textarea>
+
+    <button type="submit">완료</button>
+</form>
+</body>
+</html>

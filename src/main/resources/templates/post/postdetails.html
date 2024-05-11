@@ -1,0 +1,88 @@
+<!-- postdetails.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${post.title}">Post Details</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .post-content {
+      margin-top: 20px;
+      color: #666;
+    }
+
+    .comment-section {
+      margin-top: 30px;
+    }
+
+    .comment-form {
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+    }
+
+    .comment {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<h1 th:text="${post.title}"></h1>
+<p class="post-content" th:text="${post.content}"></p>
+
+<!-- 유저 정보 표시 -->
+<div>
+  <!-- postdetails.html -->
+
+  <!-- ... (이전의 코드) ... -->
+
+  <!-- 유저 정보 표시 -->
+  <div>
+    <p>User ID: <span th:text="${member.userid}"></span></p>
+    <p>나이: <span th:text="${member.userage}"></span></p>
+  </div>
+
+  <!-- ... (이후의 코드) ... -->
+
+</div>
+
+<!-- 댓글 섹션 -->
+<!--<div class="comment-section">-->
+<!--  <h2>댓글</h2>-->
+
+<!--  &lt;!&ndash; 댓글 목록 &ndash;&gt;-->
+<!--  <div th:each="comment : ${post.comments}" class="comment">-->
+<!--    <p th:text="${comment.content}"></p>-->
+<!--    <p>User ID: <span th:text="${comment.userId}"></span></p>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; 댓글 입력 폼 &ndash;&gt;-->
+<!--  <div class="comment-form">-->
+<!--    <form th:action="@{'/post/' + ${post.id} + '/comment'}" method="post">-->
+<!--      <textarea name="commentContent" placeholder="댓글을 입력하세요" required></textarea>-->
+<!--      <input type="submit" value="댓글 달기">-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+
+</body>
+</html>
